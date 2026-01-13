@@ -5,7 +5,7 @@ audio = AudioFileClip("voice.mp3")
 image = (
     ImageClip("image.png")
     .with_duration(audio.duration)
-    .resize(height=1280)
+    .resized(height=1280)   # ✅ MoviePy 2.x
 )
 
 video = image.with_audio(audio)

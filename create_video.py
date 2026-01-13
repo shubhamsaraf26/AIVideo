@@ -4,11 +4,11 @@ audio = AudioFileClip("voice.mp3")
 
 image = (
     ImageClip("image.png")
-    .set_duration(audio.duration)
+    .with_duration(audio.duration)
     .resize(height=1280)
 )
 
-video = image.set_audio(audio)
+video = image.with_audio(audio)
 
 video.write_videofile(
     "final_video.mp4",
